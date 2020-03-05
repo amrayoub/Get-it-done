@@ -4,7 +4,8 @@ Get it done is a task management web application backend API  built with NestJS 
 
 
 ### User shape:
-```  
+```typescript
+
 @PrimaryGeneratedColumn()
     id: number;
 
@@ -22,7 +23,7 @@ Get it done is a task management web application backend API  built with NestJS 
 }
 ```
 ### Task shape entity:
-```
+```typescript
     @PrimaryGeneratedColumn()
     id: number;
 
