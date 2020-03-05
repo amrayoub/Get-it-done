@@ -31,33 +31,63 @@
 ## Installation
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ npm run start
+$ yarn run start
 
 # watch mode
-$ npm run start:dev
+$ yarn run start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn run start:prod
 ```
+
+## Database
+
+The example codebase uses [Typeorm](http://typeorm.io/) with a mySQL database.
+
+Create a new mysql database with the name `Get it done` (or the name you specified in the ormconfig.json)
+
+Copy Typeorm config example file for database settings
+
+    config folder``
+    
+Set mysql database settings in ormconfig.json
+
+    {
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "your-mysql-username",
+      "password": "your-mysql-password",
+      "database": "nestjsrealworld",
+      "entities": ["src/**/**.entity{.ts,.js}"],
+      "synchronize": true
+    }
+    
+Start local mysql server and create new database 'nestjsrealworld'
+
+On application start, tables for all entities will be created.
+
+----------
+
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn run test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn run test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn run test:cov
 ```
 
 ## Support
